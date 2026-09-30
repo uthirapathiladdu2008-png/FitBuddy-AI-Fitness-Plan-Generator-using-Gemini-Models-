@@ -1,0 +1,10 @@
+<!doctype html>
+<html><head><title>All Users</title><link rel="stylesheet" href="/static/style.css"></head>
+<body><div class="card">
+<h1>Admin - All Users</h1>
+<table><tr><th>User ID</th><th>Name</th><th>Age</th><th>Goal</th><th>Intensity</th></tr>
+{% for user in users %}
+<tr><td>{{ user.user_id }}</td><td>{{ user.username }}</td><td>{{ user.age }}</td><td>{{ user.goal }}</td><td>{{ user.intensity }}</td></tr>
+{% endfor %}
+</table>
+</div></body></html>

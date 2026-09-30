@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head><title>FitBuddy</title><link rel="stylesheet" href="/static/style.css"></head>
+<body>
+<div class="card">
+<h1>FitBuddy</h1>
+<p>AI Fitness Plan Generator</p>
+<form action="/generate-workout" method="post">
+<input name="username" placeholder="Name" required>
+<input name="user_id" placeholder="User ID" required>
+<input name="age" type="number" placeholder="Age" required>
+<input name="weight" placeholder="Weight (kg)" required>
+<select name="goal"><option>Weight Loss</option><option>Muscle Gain</option><option>General Wellness</option></select>
+<select name="intensity"><option>Low</option><option>Medium</option><option>High</option></select>
+<button type="submit">Generate Plan</button>
+</form>
+</div>
+</body></html>

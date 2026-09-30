@@ -1,0 +1,16 @@
+<!doctype html>
+<html><head><title>FitBuddy Result</title><link rel="stylesheet" href="/static/style.css"></head>
+<body><div class="card">
+<h1>Your FitBuddy Plan</h1>
+{% if updated %}<p class="success">Plan updated successfully.</p>{% endif %}
+<pre>{{ workout_plan }}</pre>
+<h2>Nutrition / Recovery Tip</h2>
+<p>{{ nutrition_tip }}</p>
+<h2>Update Your Plan</h2>
+<form action="/submit-feedback" method="post">
+<input name="user_id" value="{{ user_id }}" required>
+<textarea name="feedback" placeholder="Example: Add more cardio"></textarea>
+<button type="submit">Update Plan</button>
+</form>
+<a href="/">Back to Home</a>
+</div></body></html>
